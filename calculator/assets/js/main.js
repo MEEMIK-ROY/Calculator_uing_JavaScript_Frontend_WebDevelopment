@@ -1,58 +1,17 @@
-/*
+let expression = document.getElementById("result");   // asign value of input field to a variable 
 
-    HOISTING
-    ' b = undefined                           '
-    ' c = undefined                           '
-    ' addFontBoldClass =  {                   '
-    '        var class_name = "font-bold";    '
-    '       return class_name;                '
-    '    }                                    '
-    '-----------------------------------------'
-    Memory Space / Global Space
-
-    ' b = undefined                           '
-    ' c = undefined                           '
-    ' addFontBoldClass =  {                   '
-    '        var class_name = "font-bold";    '
-    '       return class_name;                '
-    '    }                                    '
-    '-----------------------------------------'
-    Content Execution Space
-    
-  var a = document.getElementById('demo').classList; //statement
-        
-    everything inside a {} is a block
-
-  == will check only the Value of the variable NOT THE DATA TYPE
-    number + number = number
-    string + string/number/boolean = string
-    js programs is collection of statements.
-
-*/
-
-/* 
-   INSERT   
-   CLEAR
-   BACKSPACE   // it will remove the last character from the input  
-   in Java/C++ we have substring
-
-   equal
-*/
-
-let expression = document.getElementById("result");
-
-function insert(param) {
+function insert(param) {                              // create function to input a number in the input field
   expression.value += param;
 }
 
-function backspace() {
+function backspace() {                                // create function to delete the last character in the input field
   expression.value = expression.value.slice(0, -1);
 }
 
-function clearInput() {
+function clearInput() {                               // create a function to clear the input field
   expression.value = "";
 }
 
-function equal() {
+function equal() {                                    // create a function to evaluate the epression in the input field
   expression.value = eval(expression.value);
 }
